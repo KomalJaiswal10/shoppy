@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:shoppy/constant/colors.dart';
+import 'package:shoppy/service/constant/colors.dart';
+import 'package:shoppy/view/widgets/text.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton(
@@ -38,7 +39,7 @@ class CustomButton extends StatelessWidget {
                             color: AppColors.black.withOpacity(.2))
                       ]
                     : []),
-            child: Center(child: Text(text)),
+            child: Center(child: CustomText(text: text).buttonText()),
           ));
     });
   }

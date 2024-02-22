@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:shoppy/view/widgets/button.dart';
-import 'package:shoppy/view/widgets/extensions.dart';
+import 'package:shoppy/service/utils/extensions.dart';
 import 'package:shoppy/view/widgets/textfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -19,7 +19,7 @@ class LoginPage extends StatelessWidget {
               10.heigth,
               const CustomTextField(hint: 'Password', prefixIcon: Icons.key),
               30.heigth,
-              CustomButton(text: 'SUBMIT', onTap: () {})
+              CustomButton(text: 'LOGIN', onTap: () {})
             ],
           ),
         ),

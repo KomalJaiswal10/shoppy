@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:shoppy/constant/colors.dart';
-import 'package:shoppy/view/src/auth/login.dart';
+import 'package:get/get.dart';
+import 'package:shoppy/controller/product_controller.dart';
+import 'package:shoppy/service/constant/colors.dart';
+import 'package:shoppy/service/network/base_api.dart';
+import 'package:shoppy/service/network/base_dio.dart';
+import 'package:shoppy/view/src/bottom_nav.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Get.lazyPut(() => BaseDio());
+  Get.lazyPut(() => BaseAPI());
+  Get.lazyPut(() => ProductController());
   runApp(const MyApp());
 }
 
@@ -20,7 +28,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: AppColors.white,
         brightness: Brightness.light,
       ),
-      home: const LoginPage(),
+      home: const BottomNavBar(),
     );
   }
 }
